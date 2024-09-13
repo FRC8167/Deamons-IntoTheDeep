@@ -7,7 +7,6 @@ public class MecanumDrive {
     private final DcMotorEx leftFront, leftRear, rightFront, rightRear;
     private double drive, strafe, turn;
 
-    private double pushtest;
     /**************** Drive Constants ****************/
     private final double DEGRADED_DRIVE_LIMIT  = 0.55;
     private final double DEGRADED_STRAFE_LIMIT = 0.45;
