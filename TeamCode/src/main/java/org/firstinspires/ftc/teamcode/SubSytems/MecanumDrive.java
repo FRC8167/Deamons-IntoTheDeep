@@ -12,10 +12,10 @@ public class MecanumDrive implements TeamConstants {
 
     /**
      * CONSTRUCTOR Create a mecanum drive object using four motors
-     * @param leftFront Left front motor name from the hardware map
-     * @param leftRear Left rear motor name from the hardware map
-     * @param rightFront Right front motor name from the hardware map
-     * @param rightRear Right rear motor name from the hardware map
+     * @param leftFront     Left front motor name from the hardware map
+     * @param leftRear      Left rear motor name from the hardware map
+     * @param rightFront    Right front motor name from the hardware map
+     * @param rightRear     Right rear motor name from the hardware map
      */
     public MecanumDrive(DcMotorEx leftFront, DcMotorEx leftRear, DcMotorEx rightFront, DcMotorEx rightRear) {
 
@@ -41,10 +41,10 @@ public class MecanumDrive implements TeamConstants {
      * inputs and reduces power if the degradedMode is true. This is intended to use joystick inputs
      * for the commands and range between 0.0 and 1.0.  There are no checks to ensure the values are in
      * range.
-     * @param driveCmd Drive command, typically gamepad.left_stick_y (negated)
-     * @param strafeCmd Strafe command, typically gamepad.Left_stick_x
-     * @param turnCmd Turn command, typically gamepad.Right_stick_s
-     * @param degradedMode Drive operates at reduced power when set to True
+     * @param driveCmd      Drive command, typically gamepad.left_stick_y (negated)
+     * @param strafeCmd     Strafe command, typically gamepad.Left_stick_x
+     * @param turnCmd       Turn command, typically gamepad.Right_stick_s
+     * @param degradedMode  Drive operates at reduced power when set to True
      */
     public void mecanumDrive(double driveCmd, double strafeCmd, double turnCmd, boolean degradedMode) {
 
