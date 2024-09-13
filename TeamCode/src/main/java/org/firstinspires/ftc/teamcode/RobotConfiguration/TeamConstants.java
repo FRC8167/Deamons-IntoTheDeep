@@ -1,6 +1,6 @@
 package org.firstinspires.ftc.teamcode.RobotConfiguration;
 
-public interface UserConstants {
+public interface TeamConstants {
 
     /********************** MecanumDrive Subsystem Constants **********************/
     double DEGRADED_DRIVE_LIMIT  = 0.55;

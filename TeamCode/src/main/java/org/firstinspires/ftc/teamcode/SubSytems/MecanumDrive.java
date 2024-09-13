@@ -2,7 +2,9 @@ package org.firstinspires.ftc.teamcode.SubSytems;
 
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 
-public class MecanumDrive {
+import org.firstinspires.ftc.teamcode.RobotConfiguration.TeamConstants;
+
+public class MecanumDrive implements TeamConstants {
 
     private final DcMotorEx leftFront, leftRear, rightFront, rightRear;
     private double drive, strafe, turn;
