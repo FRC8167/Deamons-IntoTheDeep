@@ -8,9 +8,9 @@ public class MecanumDrive {
     private double drive, strafe, turn;
 
     /**************** Drive Constants ****************/
-    private final double DEGRADED_DRIVE_LIMIT  = 0.55;
-    private final double DEGRADED_STRAFE_LIMIT = 0.45;
-    private final double DEGRADED_TURN_LIMIT   = 0.35;
+//    private final double DEGRADED_DRIVE_LIMIT  = 0.55;
+//    private final double DEGRADED_STRAFE_LIMIT = 0.45;
+//    private final double DEGRADED_TURN_LIMIT   = 0.35;
     /*************************************************/
 
 
