@@ -79,7 +79,7 @@ public abstract class RobotConfig extends LinearOpMode {
     public abstract void runOpMode() throws InterruptedException;
 
 
-    /*********** Setters, Getters, Utility and Helper Functions ************/
+    /* ********* Setters, Getters, Utility and Helper Functions ********** */
     public void setAlliance(AllianceColor color){ alliance = color; }
     public static AllianceColor getAlliance(){ return alliance; }
 

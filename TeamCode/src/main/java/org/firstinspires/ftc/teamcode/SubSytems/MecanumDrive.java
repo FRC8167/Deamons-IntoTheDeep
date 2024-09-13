@@ -24,13 +24,13 @@ public class MecanumDrive implements TeamConstants {
         this.rightFront = rightFront;
         this.rightRear  = rightRear;
 
-        /** Assign Motor Directions **/
+        /* Assign Motor Directions */
         this.leftFront.setDirection(DcMotorEx.Direction.FORWARD);
         this.rightFront.setDirection(DcMotorEx.Direction.REVERSE);
         this.leftRear.setDirection(DcMotorEx.Direction.FORWARD);
         this.rightRear.setDirection(DcMotorEx.Direction.REVERSE);
 
-        /** Initialize Motor Power to 0 **/
+        /* Initialize Motor Power to 0 */
         setMotorPower(0,0,0,0);
         drive = strafe = turn = 0;
     }
