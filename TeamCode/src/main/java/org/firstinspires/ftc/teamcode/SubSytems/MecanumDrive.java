@@ -2,24 +2,20 @@ package org.firstinspires.ftc.teamcode.SubSytems;
 
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 
-public class MecanumDrive {
+import org.firstinspires.ftc.teamcode.RobotConfiguration.TeamConstants;
+
+public class MecanumDrive implements TeamConstants {
 
     private final DcMotorEx leftFront, leftRear, rightFront, rightRear;
     private double drive, strafe, turn;
 
-    /**************** Drive Constants ****************/
-    private final double DEGRADED_DRIVE_LIMIT  = 0.55;
-    private final double DEGRADED_STRAFE_LIMIT = 0.45;
-    private final double DEGRADED_TURN_LIMIT   = 0.35;
-    /*************************************************/
-
 
     /**
      * CONSTRUCTOR Create a mecanum drive object using four motors
-     * @param leftFront Left front motor name from the hardware map
-     * @param leftRear Left rear motor name from the hardware map
-     * @param rightFront Right front motor name from the hardware map
-     * @param rightRear Right rear motor name from the hardware map
+     * @param leftFront     Left front motor name from the hardware map
+     * @param leftRear      Left rear motor name from the hardware map
+     * @param rightFront    Right front motor name from the hardware map
+     * @param rightRear     Right rear motor name from the hardware map
      */
     public MecanumDrive(DcMotorEx leftFront, DcMotorEx leftRear, DcMotorEx rightFront, DcMotorEx rightRear) {
 
@@ -28,13 +24,13 @@ public class MecanumDrive {
         this.rightFront = rightFront;
         this.rightRear  = rightRear;
 
-        /** Assign Motor Directions **/
+        /* Assign Motor Directions */
         this.leftFront.setDirection(DcMotorEx.Direction.FORWARD);
         this.rightFront.setDirection(DcMotorEx.Direction.REVERSE);
         this.leftRear.setDirection(DcMotorEx.Direction.FORWARD);
         this.rightRear.setDirection(DcMotorEx.Direction.REVERSE);
 
-        /** Initialize Motor Power to 0 **/
+        /* Initialize Motor Power to 0 */
         setMotorPower(0,0,0,0);
         drive = strafe = turn = 0;
     }
@@ -45,10 +41,10 @@ public class MecanumDrive {
      * inputs and reduces power if the degradedMode is true. This is intended to use joystick inputs
      * for the commands and range between 0.0 and 1.0.  There are no checks to ensure the values are in
      * range.
-     * @param driveCmd Drive command, typically gamepad.left_stick_y (negated)
-     * @param strafeCmd Strafe command, typically gamepad.Left_stick_x
-     * @param turnCmd Turn command, typically gamepad.Right_stick_s
-     * @param degradedMode Drive operates at reduced power when set to True
+     * @param driveCmd      Drive command, typically gamepad.left_stick_y (negated)
+     * @param strafeCmd     Strafe command, typically gamepad.Left_stick_x
+     * @param turnCmd       Turn command, typically gamepad.Right_stick_s
+     * @param degradedMode  Drive operates at reduced power when set to True
      */
     public void mecanumDrive(double driveCmd, double strafeCmd, double turnCmd, boolean degradedMode) {
 
